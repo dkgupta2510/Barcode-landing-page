@@ -1,0 +1,502 @@
+{
+  "restaurant": "Mehfil Restaurant & Cafe",
+  "currency": "INR",
+  "categories": [
+    {
+      "id": "indian_breakfast",
+      "name": "Indian Breakfast",
+      "note": "Served with curd and pickle",
+      "items": [
+        { "name": "Aaloo Paratha with Curd & Pickle", "type": "veg", "price": 100 },
+        { "name": "Gobi Paratha with Curd & Pickle", "type": "veg", "price": 110 },
+        { "name": "Onion Paratha with Curd & Pickle", "type": "veg", "price": 90 },
+        { "name": "Cheese Paratha with Curd & Pickle", "type": "veg", "price": 130 },
+        { "name": "Chicken Paratha with Curd & Pickle", "type": "non-veg", "price": 135 }
+      ]
+    },
+    {
+      "id": "continental_breakfast",
+      "name": "Continental Breakfast",
+      "items": [
+        { "name": "Egg Omelette with Bread", "type": "egg", "price": 70 },
+        { "name": "Egg Bhurji", "type": "egg", "price": 90 },
+        { "name": "Boiled Eggs (3 pcs)", "type": "egg", "price": 95 },
+        { "name": "Grilled Chicken", "type": "non-veg", "price": 195 }
+      ]
+    },
+    {
+      "id": "soups",
+      "name": "Soups & Soupy Thukpa",
+      "items": [
+        { "name": "Thukpa (Veg)", "type": "veg", "price": 130 },
+        { "name": "Thukpa (Chicken)", "type": "non-veg", "price": 150 },
+        { "name": "Cream of Tomato Soup", "type": "veg", "price": 160 },
+        { "name": "Cream of Mushroom Soup (Veg)", "type": "veg", "price": 150 },
+        { "name": "Cream of Mushroom Soup (Chicken)", "type": "non-veg", "price": 170 },
+        { "name": "Manchow Soup (Veg)", "type": "veg", "price": 150 },
+        { "name": "Manchow Soup (Chicken)", "type": "non-veg", "price": 175 },
+        { "name": "Hot and Sour Soup (Veg)", "type": "veg", "price": 155 },
+        { "name": "Hot and Sour Soup (Chicken)", "type": "non-veg", "price": 165 },
+        { "name": "Lemon and Coriander Soup (Veg)", "type": "veg", "price": 125 },
+        { "name": "Lemon and Coriander Soup (Chicken)", "type": "non-veg", "price": 150 }
+      ]
+    },
+    {
+      "id": "burgers",
+      "name": "Burgers",
+      "note": "Served with French fries",
+      "items": [
+        { "name": "Aaloo Tikki Burger with Fries", "type": "veg", "price": 70 },
+        { "name": "Paneer Burger with Fries", "type": "veg", "price": 90 },
+        { "name": "Chicken Burger with Fries", "type": "non-veg", "price": 110 },
+        { "name": "Maharaja Burger with Fries", "type": "non-veg", "price": 140 }
+      ]
+    },
+    {
+      "id": "sandwiches",
+      "name": "Sandwiches",
+      "items": [
+        { "name": "Grilled Veg Sandwich", "type": "veg", "price": 100 },
+        { "name": "Grilled Cheese Sandwich", "type": "veg", "price": 120 },
+        { "name": "Grilled Paneer Sandwich", "type": "veg", "price": 130 },
+        { "name": "Grilled Chicken Sandwich", "type": "non-veg", "price": 140 },
+        { "name": "Club Sandwich", "type": "veg", "price": 145 },
+        { "name": "Cheese Baked Sandwich", "type": "veg", "price": 250 }
+      ]
+    },
+    {
+      "id": "appetizers_maggi",
+      "name": "Appetizers, Fries & Maggi",
+      "items": [
+        { "name": "French Fries (Plain)", "type": "veg", "price": 90 },
+        { "name": "French Fries (Salty)", "type": "veg", "price": 100 },
+        { "name": "French Fries (Peri Peri)", "type": "veg", "price": 145 },
+        { "name": "Cheesy Fries", "type": "veg", "price": 155 },
+        { "name": "Pav Bhaji", "type": "veg", "price": 195 },
+        { "name": "Plain Maggi (Veg)", "type": "veg", "price": 70 },
+        { "name": "Plain Maggi (Chicken)", "type": "non-veg", "price": 100 },
+        { "name": "Tadka Maggi (Veg)", "type": "veg", "price": 95 },
+        { "name": "Tadka Maggi (Chicken)", "type": "non-veg", "price": 120 },
+        { "name": "Tandoori Maggi (Veg)", "type": "veg", "price": 100 },
+        { "name": "Tandoori Maggi (Chicken)", "type": "non-veg", "price": 140 },
+        { "name": "Cheese Maggi (Veg)", "type": "veg", "price": 110 },
+        { "name": "Cheese Maggi (Chicken)", "type": "non-veg", "price": 130 }
+      ]
+    },
+    {
+      "id": "salads_healthy",
+      "name": "Salads & Healthy Food",
+      "items": [
+        { "name": "Sauté Vegetables with Garlic Bread (Veg)", "type": "veg", "price": 90 },
+        { "name": "Sauté Vegetables with Garlic Bread (Chicken)", "type": "non-veg", "price": 130 },
+        { "name": "Green Salad", "type": "veg", "price": 150 },
+        { "name": "Grilled Chicken Salad", "type": "non-veg", "price": 170 },
+        { "name": "Boiled Chicken (250g)", "type": "non-veg", "price": 200 }
+      ]
+    },
+    {
+      "id": "starters_veg",
+      "name": "Vegetarian Starters",
+      "items": [
+        { "name": "Masala Paneer Tikka", "type": "veg", "price": 120 },
+        { "name": "Achari Paneer Tikka", "type": "veg", "price": 140 },
+        { "name": "Malai Paneer Tikka", "type": "veg", "price": 170 },
+        { "name": "Stuffed Mushroom", "type": "veg", "price": 250 },
+        { "name": "Tandoori Aloo", "type": "veg", "price": 199 },
+        { "name": "Veg Seekh Kebab", "type": "veg", "price": 250 },
+        { "name": "Dahi Kebab", "type": "veg", "price": 250 },
+        { "name": "Veg Platter", "type": "veg", "price": 200 },
+        { "name": "Honey Chilli Potato", "type": "veg", "price": 150 },
+        { "name": "Honey Chilli Cauliflower", "type": "veg", "price": 180 },
+        { "name": "Crunchy Fried Babycorn", "type": "veg", "price": 150 },
+        { "name": "Crispy Corn", "type": "veg", "price": 150 },
+        { "name": "Chilli Paneer", "type": "veg", "price": 230 },
+        { "name": "Paneer 65", "type": "veg", "price": 250 },
+        { "name": "Veg Manchurian", "type": "veg", "price": 190 },
+        { "name": "Veg Cigar Roll", "type": "veg", "price": 140 },
+        { "name": "Veg Spring Roll", "type": "veg", "price": 140 }
+      ]
+    },
+    {
+      "id": "starters_nonveg",
+      "name": "Non-Vegetarian Starters",
+      "items": [
+        { "name": "Chicken Tikka", "type": "non-veg", "price": 259 },
+        { "name": "Malai Chicken Tikka", "type": "non-veg", "price": 270 },
+        { "name": "Lehsuni Chicken Tikka", "type": "non-veg", "price": 250 },
+        { "name": "Tandoori Murgh", "type": "non-veg", "price": 299 },
+        { "name": "Malai Murgh Tandoori", "type": "non-veg", "price": 300 },
+        { "name": "Non-Veg Platter", "type": "non-veg", "price": 250 },
+        { "name": "Chilli Chicken", "type": "non-veg", "price": 249 },
+        { "name": "Chicken 65", "type": "non-veg", "price": 260 },
+        { "name": "Dragon Chicken", "type": "non-veg", "price": 270 },
+        { "name": "Fried Chicken", "type": "non-veg", "price": 255 },
+        { "name": "Chicken Manchurian", "type": "non-veg", "price": 250 },
+        { "name": "Chicken Lollipop", "type": "non-veg", "price": 245 },
+        { "name": "Chicken Nuggets", "type": "non-veg", "price": 265 },
+        { "name": "Grilled Chicken", "type": "non-veg", "price": 195 },
+        { "name": "Chicken Cigar Roll", "type": "non-veg", "price": 165 },
+        { "name": "Chicken Spring Roll", "type": "non-veg", "price": 190 }
+      ]
+    },
+    {
+      "id": "chaap_specials",
+      "name": "Soya Chaap Specials",
+      "items": [
+        { "name": "Malai Chaap Tikka", "type": "veg", "half": 170, "full": 220 },
+        { "name": "Afghani Chaap", "type": "veg", "half": 170, "full": 220 },
+        { "name": "Hari Mirch Chaap", "type": "veg", "half": 170, "full": 220 },
+        { "name": "Achari Chaap", "type": "veg", "half": 170, "full": 220 },
+        { "name": "Stuffed Chaap Tikka", "type": "veg", "half": 170, "full": 220 },
+        { "name": "Pahadi Chaap Tikka", "type": "veg", "half": 170, "full": 220 },
+        { "name": "Multani Chaap Tikka", "type": "veg", "half": 170, "full": 220 },
+        { "name": "Delhi 6 Chaap Tikka", "type": "veg", "half": 170, "full": 220 },
+        { "name": "Chaap Tikka Shashlik", "type": "veg", "half": 170, "full": 220 },
+        { "name": "Masala Chaap Tikka", "type": "veg", "half": 170, "full": 220 },
+        { "name": "Chilli Chaap (Chinese Style)", "type": "veg", "half": 170, "full": 220 },
+        { "name": "Lehsuni Chaap Tikka", "type": "veg", "half": 170, "full": 220 },
+        { "name": "Lemon Chaap Tikka", "type": "veg", "half": 170, "full": 220 }
+      ]
+    },
+    {
+      "id": "rolls",
+      "name": "Rolls (Veg, Non-Veg & Chaap)",
+      "items": [
+        { "name": "Veg Roll", "type": "veg", "price": 80, "priceWithCheese": 100 },
+        { "name": "Chowmein Roll", "type": "veg", "price": 90, "priceWithCheese": 110 },
+        { "name": "Egg Roll", "type": "egg", "price": 70, "priceWithCheese": 80 },
+        { "name": "Double Egg Roll", "type": "egg", "price": 80, "priceWithCheese": 100 },
+        { "name": "Paneer Roll", "type": "veg", "price": 90, "priceWithCheese": 110 },
+        { "name": "Paneer Egg Roll", "type": "egg", "price": 100, "priceWithCheese": 120 },
+        { "name": "Chilli Paneer Roll", "type": "veg", "price": 110, "priceWithCheese": 130 },
+        { "name": "Tandoori Paneer Tikka Roll", "type": "veg", "price": 130, "priceWithCheese": 150 },
+        { "name": "Paneer Malai Tikka Roll", "type": "veg", "price": 120, "priceWithCheese": 140 },
+        { "name": "Chicken Roll", "type": "non-veg", "price": 100, "priceWithCheese": 120 },
+        { "name": "Double Egg Chicken Roll", "type": "non-veg", "price": 110, "priceWithCheese": 130 },
+        { "name": "Double Egg Double Chicken Roll", "type": "non-veg", "price": 140, "priceWithCheese": 160 },
+        { "name": "Chicken Keema Roll", "type": "non-veg", "price": 120, "priceWithCheese": 140 },
+        { "name": "Tandoori Chicken Roll", "type": "non-veg", "price": 120, "priceWithCheese": 150 },
+        { "name": "Chicken Malai Tikka Roll", "type": "non-veg", "price": 130, "priceWithCheese": 150 },
+        { "name": "Tandoori Chicken Tikka Roll", "type": "non-veg", "price": 120, "priceWithCheese": 140 },
+        { "name": "Egg Bhurji Roll", "type": "egg", "price": 90, "priceWithCheese": 110 },
+        { "name": "Egg Chicken Bhurji Roll", "type": "non-veg", "price": 120, "priceWithCheese": 140 },
+        { "name": "Hari Mirch Chaap Roll", "type": "veg", "price": 145 },
+        { "name": "Achari Chaap Roll", "type": "veg", "price": 160 },
+        { "name": "Pahadi Chaap Roll", "type": "veg", "price": 155 },
+        { "name": "Multani Chaap Roll", "type": "veg", "price": 150 },
+        { "name": "Delhi 6 Roll", "type": "veg", "price": 130 },
+        { "name": "Chilli Chaap Roll", "type": "veg", "price": 170 },
+        { "name": "Afghani Chaap Roll", "type": "veg", "price": 165 },
+        { "name": "Malai Chaap Roll", "type": "veg", "price": 150 },
+        { "name": "Masala Chaap Roll", "type": "veg", "price": 130 }
+      ]
+    },
+    {
+      "id": "momos",
+      "name": "Momos Hub",
+      "items": [
+        { "name": "Steamed Momos (Veg)", "type": "veg", "pieces": 8, "price": 100 },
+        { "name": "Steamed Momos (Paneer)", "type": "veg", "pieces": 8, "price": 120 },
+        { "name": "Steamed Momos (Cheese)", "type": "veg", "pieces": 8, "price": 135 },
+        { "name": "Steamed Momos (Chicken)", "type": "non-veg", "pieces": 8, "price": 150 },
+        { "name": "Steamed Cheese & Corn Momos", "type": "veg", "pieces": 8, "price": 160 },
+        { "name": "Steamed Cheese & Paneer Momos", "type": "veg", "pieces": 8, "price": 175 },
+        { "name": "Steamed Mix Veg Momos", "type": "veg", "pieces": 8, "price": 160 },
+        { "name": "Steamed Mushroom Momos", "type": "veg", "pieces": 8, "price": 175 },
+        { "name": "Steamed Wheat Momos", "type": "veg", "pieces": 8, "price": 150 },
+        { "name": "Fried Momos (Veg)", "type": "veg", "pieces": 8, "price": 120 },
+        { "name": "Fried Momos (Paneer)", "type": "veg", "pieces": 8, "price": 130 },
+        { "name": "Fried Momos (Cheese)", "type": "veg", "pieces": 8, "price": 140 },
+        { "name": "Fried Momos (Chicken)", "type": "non-veg", "pieces": 8, "price": 155 },
+        { "name": "Fried Cheese & Paneer Momos", "type": "veg", "pieces": 8, "price": 140 },
+        { "name": "Fried Cheese & Corn Momos", "type": "veg", "pieces": 8, "price": 155 },
+        { "name": "Pan Fried / Schezwan Butter Garlic (Veg)", "type": "veg", "pieces": 8, "price": 120 },
+        { "name": "Pan Fried / Schezwan Butter Garlic (Paneer)", "type": "veg", "pieces": 8, "price": 130 },
+        { "name": "Pan Fried / Schezwan Butter Garlic (Cheese)", "type": "veg", "pieces": 8, "price": 140 },
+        { "name": "Pan Fried / Schezwan Butter Garlic (Chicken)", "type": "non-veg", "pieces": 8, "price": 155 },
+        { "name": "Tandoori Momos (Veg)", "type": "veg", "pieces": 8, "price": 135 },
+        { "name": "Tandoori Momos (Paneer)", "type": "veg", "pieces": 8, "price": 145 },
+        { "name": "Tandoori Momos (Cheese)", "type": "veg", "pieces": 8, "price": 165 },
+        { "name": "Tandoori Momos (Chicken)", "type": "non-veg", "pieces": 8, "price": 175 },
+        { "name": "Cheesy & Buttery White Gravy (Veg)", "type": "veg", "pieces": 4, "price": 169 },
+        { "name": "Cheesy & Buttery White Gravy (Paneer)", "type": "veg", "pieces": 4, "price": 170 },
+        { "name": "Cheesy & Buttery White Gravy (Cheese)", "type": "veg", "pieces": 4, "price": 185 },
+        { "name": "Cheesy & Buttery White Gravy (Chicken)", "type": "non-veg", "pieces": 4, "price": 200 },
+        { "name": "Spicy Chilli Gravy (Veg)", "type": "veg", "pieces": 4, "price": 160 },
+        { "name": "Spicy Chilli Gravy (Paneer)", "type": "veg", "pieces": 4, "price": 175 },
+        { "name": "Spicy Chilli Gravy (Cheese)", "type": "veg", "pieces": 4, "price": 185 },
+        { "name": "Spicy Chilli Gravy (Chicken)", "type": "non-veg", "pieces": 4, "price": 190 },
+        { "name": "Kurkure Momos (Veg)", "type": "veg", "pieces": 8, "price": 135 },
+        { "name": "Kurkure Momos (Paneer)", "type": "veg", "pieces": 8, "price": 155 },
+        { "name": "Kurkure Momos (Cheese)", "type": "veg", "pieces": 8, "price": 160 },
+        { "name": "Kurkure Momos (Chicken)", "type": "non-veg", "pieces": 8, "price": 180 },
+        { "name": "Cheese & Paneer Kurkure Momos", "type": "veg", "pieces": 8, "price": 195 },
+        { "name": "Cheese & Corn Kurkure Momos", "type": "veg", "pieces": 8, "price": 180 },
+        { "name": "Afghani Momos (Veg)", "type": "veg", "pieces": 8, "price": 220 },
+        { "name": "Afghani Momos (Paneer)", "type": "veg", "pieces": 8, "price": 240 },
+        { "name": "Afghani Momos (Cheese)", "type": "veg", "pieces": 8, "price": 250 },
+        { "name": "Afghani Momos (Chicken)", "type": "non-veg", "pieces": 8, "price": 265 },
+        { "name": "Pahadi Momos (Veg)", "type": "veg", "pieces": 8, "price": 220 },
+        { "name": "Pahadi Momos (Paneer)", "type": "veg", "pieces": 8, "price": 240 },
+        { "name": "Pahadi Momos (Cheese)", "type": "veg", "pieces": 8, "price": 250 },
+        { "name": "Pahadi Momos (Chicken)", "type": "non-veg", "pieces": 8, "price": 265 },
+        { "name": "Multani Momos (Veg)", "type": "veg", "pieces": 8, "price": 220 },
+        { "name": "Multani Momos (Paneer)", "type": "veg", "pieces": 8, "price": 240 },
+        { "name": "Multani Momos (Cheese)", "type": "veg", "pieces": 8, "price": 250 },
+        { "name": "Multani Momos (Chicken)", "type": "non-veg", "pieces": 8, "price": 265 },
+        { "name": "Lehsuni Momos (Veg)", "type": "veg", "pieces": 8, "price": 220 },
+        { "name": "Lehsuni Momos (Paneer)", "type": "veg", "pieces": 8, "price": 240 },
+        { "name": "Lehsuni Momos (Cheese)", "type": "veg", "pieces": 8, "price": 250 },
+        { "name": "Lehsuni Momos (Chicken)", "type": "non-veg", "pieces": 8, "price": 265 },
+        { "name": "Peri Peri Momos (Veg)", "type": "veg", "pieces": 8, "price": 190 },
+        { "name": "Peri Peri Momos (Paneer)", "type": "veg", "pieces": 8, "price": 195 },
+        { "name": "Peri Peri Momos (Cheese)", "type": "veg", "pieces": 8, "price": 200 },
+        { "name": "Peri Peri Momos (Chicken)", "type": "non-veg", "pieces": 8, "price": 220 },
+        { "name": "Steamed Momos in Thukpa (Veg)", "type": "veg", "pieces": 5, "price": 155 },
+        { "name": "Steamed Momos in Thukpa (Paneer)", "type": "veg", "pieces": 5, "price": 175 },
+        { "name": "Steamed Momos in Thukpa (Cheese)", "type": "veg", "pieces": 5, "price": 195 },
+        { "name": "Steamed Momos in Thukpa (Chicken)", "type": "non-veg", "pieces": 5, "price": 210 },
+        { "name": "Steamed Momos in Manchow Soup (Veg)", "type": "veg", "pieces": 5, "price": 145 },
+        { "name": "Steamed Momos in Manchow Soup (Paneer)", "type": "veg", "pieces": 5, "price": 155 },
+        { "name": "Steamed Momos in Manchow Soup (Cheese)", "type": "veg", "pieces": 5, "price": 165 },
+        { "name": "Steamed Momos in Manchow Soup (Chicken)", "type": "non-veg", "pieces": 5, "price": 175 },
+        { "name": "Momos in Noodles (Veg)", "type": "veg", "pieces": 5, "price": 90 },
+        { "name": "Momos in Noodles (Paneer)", "type": "veg", "pieces": 5, "price": 110 },
+        { "name": "Momos in Noodles (Cheese)", "type": "veg", "pieces": 5, "price": 120 },
+        { "name": "Momos in Noodles (Chicken)", "type": "non-veg", "pieces": 5, "price": 140 },
+        { "name": "Momos in Maggi (Veg)", "type": "veg", "pieces": 5, "price": 80 },
+        { "name": "Momos in Maggi (Paneer)", "type": "veg", "pieces": 5, "price": 100 },
+        { "name": "Momos in Maggi (Cheese)", "type": "veg", "pieces": 5, "price": 120 },
+        { "name": "Momos in Maggi (Chicken)", "type": "non-veg", "pieces": 5, "price": 130 }
+      ]
+    },
+    {
+      "id": "pasta",
+      "name": "Pasta",
+      "items": [
+        { "name": "White Parmesan Pasta (Veg)", "type": "veg", "price": 170 },
+        { "name": "White Parmesan Pasta (Chicken)", "type": "non-veg", "price": 199 },
+        { "name": "Arrabbiata Pasta (Veg)", "type": "veg", "price": 169 },
+        { "name": "Arrabbiata Pasta (Chicken)", "type": "non-veg", "price": 210 },
+        { "name": "Pink Sauce Pasta (Veg)", "type": "veg", "price": 200 },
+        { "name": "Pink Sauce Pasta (Chicken)", "type": "non-veg", "price": 250 }
+      ]
+    },
+    {
+      "id": "pizza_garlic_bread",
+      "name": "Pizza & Garlic Bread",
+      "items": [
+        { "name": "Garlic Bread with Cheese & Topping of Choice", "type": "veg", "price": 175 },
+        { "name": "Margherita Pizza", "type": "veg", "medium": 270, "large": 320 },
+        { "name": "Onion Tomato Capsicum Pizza", "type": "veg", "medium": 250, "large": 299 },
+        { "name": "Roasted Vegetable Pizza", "type": "veg", "medium": 250, "large": 300 },
+        { "name": "Garden Fresh Pizza", "type": "veg", "medium": 250, "large": 320 },
+        { "name": "Paneer and Onion Pizza", "type": "veg", "medium": 250, "large": 300 },
+        { "name": "Mexican Pizza (Veg)", "type": "veg", "medium": 300, "large": 350 },
+        { "name": "Mexican Pizza (Chicken)", "type": "non-veg", "medium": 300, "large": 350 }
+      ]
+    },
+    {
+      "id": "sizzlers_platters_meals",
+      "name": "Sizzlers, Platters & Mini Meals",
+      "items": [
+        { "name": "Steamed Momos Sizzler (10 pcs) - Veg", "type": "veg", "price": 199 },
+        { "name": "Steamed Momos Sizzler (10 pcs) - Chicken", "type": "non-veg", "price": 299 },
+        { "name": "Mix Momos Platter (10 pcs) - Veg", "type": "veg", "price": 250 },
+        { "name": "Mix Momos Platter (10 pcs) - Chicken", "type": "non-veg", "price": 300 },
+        { "name": "Chinese Thali in Sizzler", "type": "veg", "price": 300 },
+        { "name": "Mini Meal: Sabzi + 3 Roti + Dahi + Salad", "type": "veg", "price": 200 },
+        { "name": "Mini Meal: Dal + Rice/3 Roti + Dahi + Salad", "type": "veg", "price": 200 },
+        { "name": "Paneer Butter Masala Meal (+ Rice/2 Roti + Salad)", "type": "veg", "price": 350 },
+        { "name": "Dal Makhani Meal (+ 3 Tandoori Roti/Rice + Dahi + Salad)", "type": "veg", "price": 350 },
+        { "name": "Indo-Chinese Meal (Veg Manchurian + Noodles/Fried Rice + Salad)", "type": "veg", "price": 370 }
+      ]
+    },
+    {
+      "id": "main_course_veg",
+      "name": "Main Course - Vegetarian",
+      "items": [
+        { "name": "Kadai Paneer", "type": "veg", "price": 170 },
+        { "name": "Paneer Lababdar", "type": "veg", "price": 190 },
+        { "name": "Shahi Paneer", "type": "veg", "price": 220 },
+        { "name": "Paneer Tikka Masala", "type": "veg", "price": 250 },
+        { "name": "Kaju Paneer", "type": "veg", "price": 250 },
+        { "name": "Paneer Mushroom", "type": "veg", "price": 240 },
+        { "name": "Matar Paneer", "type": "veg", "price": 180 },
+        { "name": "Paneer Bhurji", "type": "veg", "price": 230 },
+        { "name": "Paneer Do Pyaza", "type": "veg", "price": 189 },
+        { "name": "Dal Makhni", "type": "veg", "price": 159 },
+        { "name": "Dal Fry", "type": "veg", "price": 120 },
+        { "name": "Dal Tadka", "type": "veg", "price": 120 },
+        { "name": "Aloo Jeera", "type": "veg", "price": 110 },
+        { "name": "Malai Kofta", "type": "veg", "price": 199 },
+        { "name": "Mix Veg", "type": "veg", "price": 140 },
+        { "name": "Veg Makhan", "type": "veg", "price": 160 },
+        { "name": "Mushroom Masala", "type": "veg", "price": 200 },
+        { "name": "Aloo Gobi", "type": "veg", "price": 159 },
+        { "name": "Aloo Tamatar", "type": "veg", "price": 140 }
+      ]
+    },
+    {
+      "id": "main_course_chicken",
+      "name": "Main Course - Chicken",
+      "items": [
+        { "name": "Butter Chicken", "type": "non-veg", "half": 250, "full": 500 },
+        { "name": "Kadai Chicken", "type": "non-veg", "half": 250, "full": 500 },
+        { "name": "Handi Chicken", "type": "non-veg", "half": 250, "full": 500 },
+        { "name": "Chicken Curry", "type": "non-veg", "half": 250, "full": 500 },
+        { "name": "Chicken Masala", "type": "non-veg", "half": 250, "full": 500 },
+        { "name": "Mehfil Special Chicken", "type": "non-veg", "half": 250, "full": 500 },
+        { "name": "Chicken Korma", "type": "non-veg", "half": 250, "full": 500 },
+        { "name": "Chicken Do Pyaza", "type": "non-veg", "half": 250, "full": 500 },
+        { "name": "Chicken Changezi", "type": "non-veg", "half": 250, "full": 500 },
+        { "name": "Shahi Chicken", "type": "non-veg", "half": 250, "full": 500 }
+      ]
+    },
+    {
+      "id": "mutton_specials",
+      "name": "Mutton Specials",
+      "items": [
+        { "name": "Handi Mutton", "type": "non-veg", "half": 400, "full": 699 },
+        { "name": "Mutton Masala", "type": "non-veg", "half": 400, "full": 699 },
+        { "name": "Laal Maas", "type": "non-veg", "half": 400, "full": 699 },
+        { "name": "Mutton Korma", "type": "non-veg", "half": 400, "full": 699 }
+      ]
+    },
+    {
+      "id": "fish_egg_specials",
+      "name": "Fish & Egg Specials",
+      "items": [
+        { "name": "Fish Curry", "type": "non-veg", "half": 249, "full": 519 },
+        { "name": "Fish Masala", "type": "non-veg", "half": 229, "full": 519 },
+        { "name": "Fish Masala Fry", "type": "non-veg", "half": 249, "full": 519 },
+        { "name": "Egg Curry", "type": "egg", "price": 200 },
+        { "name": "Egg Masala", "type": "egg", "price": 200 }
+      ]
+    },
+    {
+      "id": "rice_noodles",
+      "name": "Rice & Asian Noodles",
+      "items": [
+        { "name": "Fried Rice (Veg)", "type": "veg", "price": 110 },
+        { "name": "Fried Rice (Egg)", "type": "egg", "price": 135 },
+        { "name": "Fried Rice (Paneer)", "type": "veg", "price": 145 },
+        { "name": "Fried Rice (Chicken)", "type": "non-veg", "price": 155 },
+        { "name": "Schezwan Fried Rice", "type": "veg", "price": 130 },
+        { "name": "Chilli Garlic Fried Rice", "type": "veg", "price": 140 },
+        { "name": "Mushroom Fried Rice", "type": "veg", "price": 160 },
+        { "name": "Garlic Rice (Veg)", "type": "veg", "price": 120 },
+        { "name": "Garlic Rice (Egg)", "type": "egg", "price": 130 },
+        { "name": "Garlic Rice (Paneer)", "type": "veg", "price": 140 },
+        { "name": "Garlic Rice (Chicken)", "type": "non-veg", "price": 155 },
+        { "name": "Indonesian Rice (Veg)", "type": "veg", "price": 155 },
+        { "name": "Indonesian Rice (Chicken)", "type": "non-veg", "price": 175 },
+        { "name": "Hakka Noodles (Veg)", "type": "veg", "price": 120 },
+        { "name": "Hakka Noodles (Chicken)", "type": "non-veg", "price": 150 },
+        { "name": "Chowmein (Veg)", "type": "veg", "price": 100 },
+        { "name": "Chowmein (Paneer)", "type": "veg", "price": 130 },
+        { "name": "Chowmein (Egg)", "type": "egg", "price": 145 },
+        { "name": "Chowmein (Chicken)", "type": "non-veg", "price": 155 },
+        { "name": "Chilli Garlic Noodles (Veg)", "type": "veg", "price": 110 },
+        { "name": "Chilli Garlic Noodles (Paneer)", "type": "veg", "price": 130 },
+        { "name": "Chilli Garlic Noodles (Egg)", "type": "egg", "price": 135 },
+        { "name": "Chilli Garlic Noodles (Chicken)", "type": "non-veg", "price": 145 },
+        { "name": "Schezwan Noodles (Veg)", "type": "veg", "price": 110 },
+        { "name": "Schezwan Noodles (Paneer)", "type": "veg", "price": 130 },
+        { "name": "Schezwan Noodles (Egg)", "type": "egg", "price": 135 },
+        { "name": "Schezwan Noodles (Chicken)", "type": "non-veg", "price": 150 },
+        { "name": "Singapore Noodles (Veg)", "type": "veg", "price": 150 },
+        { "name": "Singapore Noodles (Egg)", "type": "egg", "price": 160 },
+        { "name": "Singapore Noodles (Paneer)", "type": "veg", "price": 170 },
+        { "name": "Singapore Noodles (Chicken)", "type": "non-veg", "price": 200 },
+        { "name": "Triple Rice", "type": "veg", "price": 250 }
+      ]
+    },
+    {
+      "id": "indian_rice_biryani",
+      "name": "Indian Rice & Biryani",
+      "items": [
+        { "name": "Sada Chawal (Plain Steamed Rice)", "type": "veg", "price": 100 },
+        { "name": "Jeera Rice", "type": "veg", "price": 110 },
+        { "name": "Veg Pulao", "type": "veg", "price": 155 },
+        { "name": "Matar Pulao", "type": "veg", "price": 150 },
+        { "name": "Veg Dum Biryani", "type": "veg", "price": 170 },
+        { "name": "Egg Biryani", "type": "egg", "price": 199 },
+        { "name": "Chicken Dum Biryani", "type": "non-veg", "price": 250 },
+        { "name": "Chicken Hyderabadi Biryani", "type": "non-veg", "price": 270 },
+        { "name": "Mutton Dum Biryani", "type": "non-veg", "price": 400 },
+        { "name": "Mutton Hyderabadi Biryani", "type": "non-veg", "price": 450 }
+      ]
+    },
+    {
+      "id": "breads",
+      "name": "Indian Breads",
+      "items": [
+        { "name": "Tawa Roti Plain", "type": "veg", "price": 15 },
+        { "name": "Tawa Roti Butter", "type": "veg", "price": 20 },
+        { "name": "Tandoori Roti Plain", "type": "veg", "price": 15 },
+        { "name": "Tandoori Butter Roti", "type": "veg", "price": 20 },
+        { "name": "Rumali Roti Plain", "type": "veg", "price": 20 },
+        { "name": "Butter Rumali Roti", "type": "veg", "price": 30 },
+        { "name": "Lachha Paratha", "type": "veg", "price": 40 },
+        { "name": "Plain Naan", "type": "veg", "price": 40 },
+        { "name": "Butter Naan", "type": "veg", "price": 45 },
+        { "name": "Stuffed Naan", "type": "veg", "price": 70 },
+        { "name": "Chicken Keema Naan", "type": "non-veg", "price": 110 }
+      ]
+    },
+    {
+      "id": "mojitos_chillers",
+      "name": "Mojitos & Chillers",
+      "items": [
+        { "name": "Masala Lemonade", "type": "veg", "price": 90 },
+        { "name": "Virgin Mojito", "type": "veg", "price": 90 },
+        { "name": "Blue Lagoon Mojito", "type": "veg", "price": 90 },
+        { "name": "Green Apple Mojito", "type": "veg", "price": 99 },
+        { "name": "Litchi Mojito", "type": "veg", "price": 99 },
+        { "name": "Strawberry Mojito", "type": "veg", "price": 99 },
+        { "name": "Cranberry Mojito", "type": "veg", "price": 99 },
+        { "name": "Red Berries Mojito", "type": "veg", "price": 70 },
+        { "name": "Watermelon Mojito", "type": "veg", "price": 80 },
+        { "name": "Blackcurrant Mojito", "type": "veg", "price": 100 }
+      ]
+    },
+    {
+      "id": "iced_teas",
+      "name": "Iced Teas",
+      "items": [
+        { "name": "Lemon & Mint Iced Tea", "type": "veg", "price": 99 },
+        { "name": "Blackcurrant Iced Tea", "type": "veg", "price": 99 },
+        { "name": "Green Apple Iced Tea", "type": "veg", "price": 99 },
+        { "name": "Orange Iced Tea", "type": "veg", "price": 99 },
+        { "name": "Mango Iced Tea", "type": "veg", "price": 90 },
+        { "name": "Watermelon Iced Tea", "type": "veg", "price": 90 },
+        { "name": "Cranberry Iced Tea", "type": "veg", "price": 90 },
+        { "name": "Pineapple Iced Tea", "type": "veg", "price": 80 },
+        { "name": "Spicy Guava Iced Tea", "type": "veg", "price": 110 }
+      ]
+    },
+    {
+      "id": "chai_hot_tea",
+      "name": "Chai Shai (Hot Teas)",
+      "items": [
+        { "name": "Masala Tea in Kulhad", "type": "veg", "price": 30 },
+        { "name": "Cardamom (Elaichi) Tea", "type": "veg", "price": 30 },
+        { "name": "Lemon Tea", "type": "veg", "price": 35 },
+        { "name": "Green Tea with Lemon & Honey", "type": "veg", "price": 55 }
+      ]
+    },
+    {
+      "id": "desserts",
+      "name": "Desserts & Ice Creams",
+      "items": [
+        { "name": "Brownie with Ice Cream on Sizzler", "type": "veg", "price": 140 },
+        { "name": "Hot Brownie Fudge", "type": "veg", "price": 90 },
+        { "name": "Mud Pie Brownie", "type": "veg", "price": 100 },
+        { "name": "Vanilla Ice Cream (2 Scoops)", "type": "veg", "price": 60 },
+        { "name": "Kesar Badam Ice Cream (2 Scoops)", "type": "veg", "price": 70 },
+        { "name": "Chocolate Ice Cream (2 Scoops)", "type": "veg", "price": 80 }
+      ]
+    }
+  ]
+}

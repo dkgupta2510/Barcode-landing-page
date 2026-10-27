@@ -724,31 +724,53 @@
     }
 
     .modal-body {
-      padding: 18px 20px 24px;
+      padding: 16px 18px 24px;
       overflow-y: auto;
       overscroll-behavior: contain;
       display: flex;
       flex-direction: column;
-      gap: 16px;
+      gap: 14px;
+      flex: 1;
     }
 
-    /* Menu Search & Tabs */
+    /* Sticky Search & Tabs Controls */
+    .menu-sticky-controls {
+      position: sticky;
+      top: -16px;
+      z-index: 20;
+      background: linear-gradient(180deg, #1C140F 0%, #16100C 92%, rgba(22, 16, 12, 0.95) 100%);
+      backdrop-filter: blur(12px);
+      -webkit-backdrop-filter: blur(12px);
+      margin: -16px -18px 0;
+      padding: 14px 18px 12px;
+      border-bottom: 1px solid rgba(212, 175, 55, 0.16);
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+      flex-shrink: 0;
+    }
+
+    /* Menu Search */
     .menu-search-wrap {
       position: relative;
+      width: 100%;
+      flex-shrink: 0;
     }
     .menu-search-input {
       width: 100%;
-      padding: 10px 14px 10px 38px;
+      height: 42px;
+      padding: 0 14px 0 38px;
       border-radius: 12px;
-      background: rgba(11, 8, 6, 0.85);
+      background: rgba(11, 8, 6, 0.9);
       border: 1px solid var(--border-gold-subtle);
       color: var(--cream);
       font-size: 13.5px;
       outline: none;
-      transition: border-color 0.2s;
+      transition: border-color 0.2s, box-shadow 0.2s;
     }
     .menu-search-input:focus {
       border-color: var(--gold-primary);
+      box-shadow: 0 0 12px rgba(212, 175, 55, 0.2);
     }
     .menu-search-wrap svg {
       position: absolute;
@@ -757,34 +779,61 @@
       transform: translateY(-50%);
       width: 16px;
       height: 16px;
-      stroke: var(--text-dim);
+      stroke: var(--gold-light);
+      opacity: 0.7;
+      pointer-events: none;
     }
 
+    /* Menu Tabs Horizontal Carousel */
     .menu-tabs {
-      display: flex;
+      display: flex !important;
+      flex-direction: row;
+      flex-wrap: nowrap;
+      align-items: center;
       gap: 8px;
-      overflow-x: auto;
-      padding-bottom: 4px;
+      overflow-x: auto !important;
+      overflow-y: hidden;
+      padding: 6px 2px 10px;
+      min-height: 50px;
       scrollbar-width: none;
+      -webkit-overflow-scrolling: touch;
+      flex-shrink: 0 !important;
+      width: 100%;
     }
-    .menu-tabs::-webkit-scrollbar { display: none; }
+    .menu-tabs::-webkit-scrollbar {
+      display: none;
+    }
 
     .menu-tab-btn {
-      flex: none;
-      padding: 6px 14px;
-      border-radius: 20px;
-      background: rgba(255, 255, 255, 0.05);
+      flex: 0 0 auto !important;
+      display: inline-flex !important;
+      align-items: center;
+      justify-content: center;
+      height: 36px;
+      padding: 0 16px;
+      border-radius: 999px;
+      background: rgba(255, 255, 255, 0.08);
       border: 1px solid var(--border-gold-subtle);
       color: var(--text-muted);
-      font-size: 12px;
+      font-size: 13px;
       font-weight: 600;
+      line-height: 1;
+      white-space: nowrap;
       cursor: pointer;
-      transition: all 0.2s;
+      user-select: none;
+      transition: all 0.2s cubic-bezier(0.16, 1, 0.3, 1);
+    }
+    .menu-tab-btn:hover {
+      background: rgba(212, 175, 55, 0.16);
+      color: var(--gold-light);
+      border-color: rgba(212, 175, 55, 0.45);
     }
     .menu-tab-btn.active {
-      background: var(--gold-primary);
-      color: #120E0A;
+      background: linear-gradient(135deg, var(--gold-light) 0%, var(--gold-primary) 100%);
+      color: #120D09;
+      font-weight: 700;
       border-color: var(--gold-primary);
+      box-shadow: 0 3px 14px rgba(212, 175, 55, 0.4);
     }
 
     /* Menu Item Cards */
@@ -796,16 +845,33 @@
 
     .menu-item-card {
       display: flex;
-      justify-content: space-between;
-      gap: 14px;
-      padding: 12px 14px;
-      background: rgba(14, 10, 8, 0.75);
-      border: 1px solid rgba(212, 175, 55, 0.15);
+      flex-direction: column;
+      gap: 7px;
+      padding: 13px 15px;
+      background: rgba(18, 13, 10, 0.85);
+      border: 1px solid rgba(212, 175, 55, 0.16);
       border-radius: 14px;
-      transition: border-color 0.2s;
+      transition: border-color 0.2s, background-color 0.2s;
     }
     .menu-item-card:hover {
-      border-color: rgba(212, 175, 55, 0.35);
+      border-color: rgba(212, 175, 55, 0.38);
+      background: rgba(24, 17, 13, 0.95);
+    }
+
+    .item-header {
+      display: flex;
+      align-items: flex-start;
+      justify-content: space-between;
+      gap: 12px;
+      width: 100%;
+    }
+
+    .item-title-wrap {
+      display: flex;
+      align-items: flex-start;
+      gap: 9px;
+      flex: 1;
+      min-width: 0;
     }
 
     .diet-badge {
@@ -816,10 +882,13 @@
       border-radius: 3px;
       padding: 2px;
       flex: none;
-      margin-top: 3px;
+      margin-top: 2.5px;
     }
     .diet-badge.non-veg {
       border-color: #EF4444;
+    }
+    .diet-badge.egg {
+      border-color: #F59E0B;
     }
     .diet-badge-dot {
       width: 100%;
@@ -830,27 +899,74 @@
     .diet-badge.non-veg .diet-badge-dot {
       background: #EF4444;
     }
-
-    .item-meta {
-      flex: 1;
+    .diet-badge.egg .diet-badge-dot {
+      background: #F59E0B;
     }
+
     .item-name {
-      font-size: 14px;
+      font-size: 14.5px;
       font-weight: 700;
       color: var(--cream);
+      line-height: 1.35;
+      letter-spacing: 0.01em;
+      flex: 1;
     }
-    .item-desc {
-      font-size: 12px;
-      color: var(--text-muted);
-      margin-top: 3px;
-      line-height: 1.4;
-    }
-    .item-price {
+
+    .item-main-price {
       font-family: 'Cinzel', serif;
       font-weight: 700;
       font-size: 14.5px;
       color: var(--gold-light);
       white-space: nowrap;
+      flex-shrink: 0;
+      text-align: right;
+    }
+    .item-main-price .from-tag {
+      font-family: 'Plus Jakarta Sans', system-ui, sans-serif;
+      font-size: 10.5px;
+      font-weight: 600;
+      color: var(--text-dim);
+      text-transform: uppercase;
+      letter-spacing: 0.06em;
+      margin-right: 4px;
+    }
+
+    .item-desc {
+      font-size: 12px;
+      color: var(--text-muted);
+      line-height: 1.45;
+      margin: 0;
+      padding-left: 23px;
+    }
+
+    .item-variants-wrap {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 6px;
+      padding-left: 23px;
+      margin-top: 2px;
+    }
+
+    .variant-chip {
+      display: inline-flex;
+      align-items: center;
+      gap: 4px;
+      padding: 3px 9px;
+      border-radius: 6px;
+      background: rgba(212, 175, 55, 0.08);
+      border: 1px solid rgba(212, 175, 55, 0.2);
+      font-size: 11.5px;
+      color: var(--cream-soft);
+      line-height: 1.25;
+    }
+    .variant-chip .chip-label {
+      color: var(--text-muted);
+      font-size: 11px;
+    }
+    .variant-chip .chip-price {
+      font-family: 'Cinzel', serif;
+      font-weight: 700;
+      color: var(--gold-light);
     }
 
     /* ========================================================
@@ -951,14 +1067,6 @@
 
     <!-- Stand Top Header (Inspired directly by the physical acrylic stand) -->
     <header class="stand-header">
-      <div class="nfc-tap-badge">
-        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-          <path d="M6 9a6 6 0 0 1 12 0v6a6 6 0 0 1-12 0z"/>
-          <path d="M9 12a3 3 0 0 1 6 0v2a3 3 0 0 1-6 0z"/>
-        </svg>
-        <span>NFC • Quick Tap &amp; Scan</span>
-      </div>
-
       <p class="stand-eyebrow" id="standEyebrow">WE'D LOVE YOUR FEEDBACK</p>
       <p class="stand-tap" id="standTapHere">TAP HERE</p>
 
@@ -1106,19 +1214,25 @@
         </button>
       </div>
       <div class="modal-body">
-        <div class="menu-search-wrap">
-          <svg viewBox="0 0 24 24" fill="none" stroke-width="2"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
-          <input type="text" id="menuSearch" class="menu-search-input" placeholder="Search dishes, coffee, shakes...">
-        </div>
+        <div class="menu-sticky-controls">
+          <div class="menu-search-wrap">
+            <svg viewBox="0 0 24 24" fill="none" stroke-width="2"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
+            <input type="text" id="menuSearch" class="menu-search-input" placeholder="Search dishes, coffee, shakes...">
+          </div>
 
-        <div class="menu-tabs" id="menuTabs">
-          <button type="button" class="menu-tab-btn active" data-cat="all">All Items</button>
-          <button type="button" class="menu-tab-btn" data-cat="bestsellers">Bestsellers</button>
-          <button type="button" class="menu-tab-btn" data-cat="starters">Starters</button>
-          <button type="button" class="menu-tab-btn" data-cat="mains">Main Course</button>
-          <button type="button" class="menu-tab-btn" data-cat="cafe">Café &amp; Pizza</button>
-          <button type="button" class="menu-tab-btn" data-cat="drinks">Drinks &amp; Shakes</button>
-          <button type="button" class="menu-tab-btn" data-cat="desserts">Desserts</button>
+          <div class="menu-tabs" id="menuTabs">
+            <button type="button" class="menu-tab-btn active" data-cat="all">All Items</button>
+            <button type="button" class="menu-tab-btn" data-cat="breakfast">Breakfast</button>
+            <button type="button" class="menu-tab-btn" data-cat="starters">Starters &amp; Chaap</button>
+            <button type="button" class="menu-tab-btn" data-cat="momos">Momos Hub</button>
+            <button type="button" class="menu-tab-btn" data-cat="rolls">Rolls</button>
+            <button type="button" class="menu-tab-btn" data-cat="cafe">Pizza, Burgers &amp; Bites</button>
+            <button type="button" class="menu-tab-btn" data-cat="mains">Main Course</button>
+            <button type="button" class="menu-tab-btn" data-cat="rice">Rice, Noodles &amp; Biryani</button>
+            <button type="button" class="menu-tab-btn" data-cat="breads">Breads</button>
+            <button type="button" class="menu-tab-btn" data-cat="drinks">Drinks &amp; Tea</button>
+            <button type="button" class="menu-tab-btn" data-cat="desserts">Desserts</button>
+          </div>
         </div>
 
         <div class="menu-items-grid" id="menuGrid">
@@ -1134,6 +1248,9 @@
     <svg viewBox="0 0 24 24" fill="none" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg>
     <span id="toastMsg">Action completed</span>
   </div>
+
+  <!-- Mehfil Full Digital Menu Dataset -->
+  <script src="assets/menu-data.js"></script>
 
   <script>
     /* ========================================================
@@ -1161,21 +1278,8 @@
       wifiPassword: "goodfoodgreatcompany"
     };
 
-    /* ========================================================
-       SAMPLE DIGITAL MENU ITEMS FOR MEHFIL
-       ======================================================== */
-    const MENU_DATA = [
-      { id: 1, name: "Mehfil Special Butter Paneer", cat: "mains", price: "₹280", veg: true, desc: "Rich velvety tomato gravy with char-grilled cottage cheese and aromatic kasoori methi." },
-      { id: 2, name: "Dum Biryani Handi", cat: "bestsellers", price: "₹310", veg: true, desc: "Long-grain basmati cooked with saffron, spices, and fresh herbs in sealed clay pot." },
-      { id: 3, name: "Tandoori Malai Chaap", cat: "starters", price: "₹240", veg: true, desc: "Soya chaap marinated in cream, green cardamom, and mild tandoori spices." },
-      { id: 4, name: "Crispy Peri-Peri Fries", cat: "cafe", price: "₹140", veg: true, desc: "Golden fried potato batons tossed in fiery African peri-peri herb blend." },
-      { id: 5, name: "Artisanal Woodfire Pizza", cat: "cafe", price: "₹290", veg: true, desc: "Hand-stretched sourdough crust with San Marzano sauce, fresh mozzarella & basil." },
-      { id: 6, name: "Hazelnut Cold Coffee", cat: "drinks", price: "₹170", veg: true, desc: "Double shot espresso blended with roasted hazelnut syrup and creamy ice-cream." },
-      { id: 7, name: "KitKat Thick Shake", cat: "drinks", price: "₹190", veg: true, desc: "Crushed KitKat wafers, rich chocolate ganache, and chilled whipped cream." },
-      { id: 8, name: "Dahi Ke Sholay", cat: "starters", price: "₹220", veg: true, desc: "Crunchy rolled bread pockets filled with spiced hung curd and fresh mint." },
-      { id: 9, name: "Dal Mehfil (24-hr Slow Simmer)", cat: "mains", price: "₹240", veg: true, desc: "Signature black lentils slow-cooked overnight with churned butter and cream." },
-      { id: 10, name: "Sizzling S'mores Brownie", cat: "desserts", price: "₹210", veg: true, desc: "Fudgy warm walnut brownie served on a sizzler plate with vanilla gelato." }
-    ];
+    /* Full Menu Reference */
+    const ALL_ITEMS = (typeof MENU_DATA !== "undefined" && Array.isArray(MENU_DATA)) ? MENU_DATA : [];
 
     /* ========================================================
        ACTIONS LIST CONFIGURATION
@@ -1256,7 +1360,7 @@
       setupRating();
 
       // Setup Menu Search & Filter
-      renderMenu(MENU_DATA);
+      renderMenu(ALL_ITEMS);
       setupMenuEvents();
 
       // Modal close button listeners
@@ -1325,7 +1429,7 @@
         1: "We're sorry! Please let our manager know so we can make it right.",
         2: "Thanks for your feedback. We are eager to improve!",
         3: "Good to have you! How can we make it exceptional?",
-        4: "Glad you enjoyed! Tap below to leave a review.",
+        4: "⭐⭐⭐⭐ Wonderful! We'd love your review on Google!",
         5: "⭐⭐⭐⭐⭐ Fantastic! We'd love your love on Google!"
       };
 
@@ -1340,8 +1444,8 @@
           note.textContent = notes[rating];
           note.style.opacity = "1";
 
-          if (rating === 5) {
-            showToast("Thank you for 5 stars! Opening Google Review...");
+          if (rating >= 4) {
+            showToast(`Thank you for ${rating} stars! Opening Google Review...`);
             setTimeout(() => {
               window.open(CONFIG.googleReviewUrl, "_blank", "noopener,noreferrer");
             }, 800);
@@ -1413,26 +1517,110 @@
       }, 3200);
     }
 
+    /* Parse price string into primary header price and option chips */
+    function parsePricing(priceStr) {
+      if (!priceStr) return { primaryHtml: "", chipsHtml: "" };
+
+      // Check if price contains multiple tiers/variants
+      if (priceStr.includes("|") || (priceStr.includes("/") && (priceStr.includes("(") || /half|medium|cheese/i.test(priceStr)))) {
+        const delimiter = priceStr.includes("|") ? "|" : "/";
+        const parts = priceStr.split(delimiter).map(s => s.trim()).filter(Boolean);
+
+        const numbers = [];
+        priceStr.replace(/₹\s*(\d+)/g, (_, n) => { numbers.push(parseInt(n, 10)); });
+        const minPrice = numbers.length > 0 ? Math.min(...numbers) : null;
+        const primaryHtml = minPrice ? `<span class="from-tag">From</span>₹${minPrice}` : parts[0];
+
+        const chipsHtml = parts.map(part => {
+          let label = "";
+          let price = part;
+
+          let m = part.match(/₹\s*(\d+)\s*\(([^)]+)\)/i);
+          if (m) {
+            price = "₹" + m[1];
+            label = m[2].trim();
+            if (label.toLowerCase() === 'v') label = 'Veg';
+            else if (label.toLowerCase() === 'p') label = 'Paneer';
+            else if (label.toLowerCase() === 'e') label = 'Egg';
+            else if (label.toLowerCase() === 'c') label = 'Chicken';
+            else if (label.toLowerCase() === 'm') label = 'Medium';
+            else if (label.toLowerCase() === 'l') label = 'Large';
+          } else {
+            m = part.match(/\(([^)]+)\)\s*₹\s*(\d+)/i);
+            if (m) {
+              label = m[1].trim();
+              price = "₹" + m[2];
+            } else if (/cheese/i.test(part)) {
+              m = part.match(/₹\s*(\d+)/);
+              label = "w/ Cheese";
+              price = m ? "₹" + m[1] : part;
+            } else if (/^₹\s*\d+$/.test(part)) {
+              label = "Regular";
+            }
+          }
+
+          return `<span class="variant-chip">${label ? `<span class="chip-label">${label}:</span>` : ''}<span class="chip-price">${price}</span></span>`;
+        }).join("");
+
+        return {
+          primaryHtml,
+          chipsHtml: `<div class="item-variants-wrap">${chipsHtml}</div>`
+        };
+      }
+
+      // Half / Full
+      if (/half/i.test(priceStr) && /full/i.test(priceStr)) {
+        const hMatch = priceStr.match(/₹\s*(\d+)\s*\(Half\)/i);
+        const fMatch = priceStr.match(/₹\s*(\d+)\s*\(Full\)/i);
+        const hPrice = hMatch ? "₹" + hMatch[1] : "";
+        const fPrice = fMatch ? "₹" + fMatch[1] : "";
+        return {
+          primaryHtml: hPrice ? `<span class="from-tag">From</span>${hPrice}` : priceStr,
+          chipsHtml: `<div class="item-variants-wrap">
+            <span class="variant-chip"><span class="chip-label">Half:</span><span class="chip-price">${hPrice}</span></span>
+            <span class="variant-chip"><span class="chip-label">Full:</span><span class="chip-price">${fPrice}</span></span>
+          </div>`
+        };
+      }
+
+      // Single price or simple dual
+      return {
+        primaryHtml: priceStr,
+        chipsHtml: ""
+      };
+    }
+
     /* Menu System */
     function renderMenu(items) {
       const grid = $("menuGrid");
-      if (items.length === 0) {
+      if (!items || items.length === 0) {
         grid.innerHTML = `<p style="text-align:center; color:var(--text-muted); padding:20px;">No items match your search.</p>`;
         return;
       }
 
-      grid.innerHTML = items.map(item => `
+      grid.innerHTML = items.map(item => {
+        let dietClass = "";
+        if (item.diet === "non-veg" || item.veg === false) dietClass = "non-veg";
+        else if (item.diet === "egg") dietClass = "egg";
+
+        const pricing = parsePricing(item.price);
+
+        return `
         <div class="menu-item-card">
-          <div class="diet-badge ${item.veg ? '' : 'non-veg'}">
-            <div class="diet-badge-dot"></div>
+          <div class="item-header">
+            <div class="item-title-wrap">
+              <span class="diet-badge ${dietClass}">
+                <span class="diet-badge-dot"></span>
+              </span>
+              <span class="item-name">${item.name}</span>
+            </div>
+            <div class="item-main-price">${pricing.primaryHtml}</div>
           </div>
-          <div class="item-meta">
-            <div class="item-name">${item.name}</div>
-            <div class="item-desc">${item.desc}</div>
-          </div>
-          <div class="item-price">${item.price}</div>
+          ${item.desc ? `<p class="item-desc">${item.desc}</p>` : ''}
+          ${pricing.chipsHtml}
         </div>
-      `).join("");
+      `;
+      }).join("");
     }
 
     function setupMenuEvents() {
@@ -1443,9 +1631,10 @@
 
       function filterItems() {
         const query = searchInput.value.toLowerCase().trim();
-        const filtered = MENU_DATA.filter(item => {
+        const dataset = ALL_ITEMS;
+        const filtered = dataset.filter(item => {
           const matchCat = currentCat === "all" || item.cat === currentCat;
-          const matchQuery = item.name.toLowerCase().includes(query) || item.desc.toLowerCase().includes(query);
+          const matchQuery = !query || item.name.toLowerCase().includes(query) || (item.desc && item.desc.toLowerCase().includes(query));
           return matchCat && matchQuery;
         });
         renderMenu(filtered);
@@ -1459,6 +1648,7 @@
           tab.classList.add("active");
           currentCat = tab.dataset.cat;
           filterItems();
+          tab.scrollIntoView({ behavior: "smooth", inline: "center", block: "nearest" });
         });
       });
     }
